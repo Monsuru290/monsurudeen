@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day2</title>
+	<link rel="stylesheet" type="text/css" href="day2.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+	<div class="main-page">
+		<div class="navigator">
+			<a href=""><img src="logo_transparent.png"></a>
+		<div class="menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Product</a></li>
+				<li><a href="#">New-Arrival</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<!-----cart-->
+		<a href="#"><i class="cart">&#xf07a;</i></a>
+	</div>
+		<!----text-->
+		<div class="text">
+			<p>Manzur <font color="#1ed7f4"> Stores</font></p>
+			<p>Awesome web developer</p>
+			<p>Manzur</p>
+		</div>
+	<!--product-image1---->
+	<div class="product-image img1 active-product ">
+		<img src="ewa.jpg">
+	</div>
+	<!--product-image2---->
+	<div class="product-image img2 ">
+		<img src="asaro.jpg">
+	</div>
+	<!--product-image3---->
+	<div class="product-image img3">
+		<img src="igbin.jpg">
+	</div>
+	<!--product-image4---->
+	<div class="product-image img4">
+		<img src="iyan.jpg">
+	</div>
+<!-----order-tool-now---->
+<div class="tools">
+	<!----order-now--->
+	<div class="order-now">
+	<a href="#">Order-now</a>
+</div>
+<!----prescription---->
+<div class="prescription">
+	<a href="#">prescription</a>
+</div>
+<!----more details---->
+<div class="more-details">
+	<a href="#">More-details</a>
+</div>
+
+</div>
+	</div>
+</div>
+	<div class="product-page">
+		<div class="production-list">
+			<!---box 1----->
+			<div class="box-1 active">
+				<!-----heading---->
+				<p class="heading">Product-1</p>
+				<!---icon--->
+				<div class="p-icon">
+				<i class="fas fa-car"></i>
+			</div>
+			<p class="type">Ewa<br>with Ponmo</p>
+
+			</div>
+						<!---box 2----->
+			<div class="box-2">
+
+				<!-----heading---->
+				<p class="heading">Product-2</p>
+				<!---icon--->
+				<div class="p-icon">
+				<i class="icon">&#9776;</i>
+			</div>
+			<p class="type">Asaro<br>Elede</p>
+			</div>
+						<!---box 3----->
+			<div class="box-3 ">
+
+				<!-----heading---->
+				<p class="heading">Product-3</p>
+				<!---icon--->
+				<div class="p-icon">
+				<i class="fas fa-hamburger"></i>
+			</div>
+			<p class="type">Igbin<br>Alata</p>
+			</div>
+						<!---box 4----->
+			<div class="box-4">
+				<!-----heading---->
+				<p class="heading">Product-4</p>
+				<!---icon--->
+				<div class="p-icon">
+				<i class="icon">&#9776;</i>
+			</div>
+			<p class="type">Iyan<br> with Egusi soup</p>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+<script src="js/JQuery3.3.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+<!----javascript------>
+<script type="text/javascript">
+	$(document).on('click','.box-1,.box-2,.box-3,.box-4', function(){
+		$(this).addClass('active').siblings().removeClass('active')
+	});
+	/*production image active*/
+	$(document).on('click','.box-1', function(){
+		$('.img1').addClass('active-product').siblings('.img2,.img3,.img4').removeClass('active-product')
+	});
+
+		$(document).on('click','.box-2', function(){
+		$('.img2').addClass('active-product').siblings('.img1,.img3,.img4').removeClass('active-product')
+	});
+				$(document).on('click','.box-3', function(){
+		$('.img3').addClass('active-product').siblings('.img1,.img2,.img4').removeClass('active-product')
+	});
+						$(document).on('click','.box-4', function(){
+		$('.img4').addClass('active-product').siblings('.img1,.img2,.img3').removeClass('active-product')
+	});
+</script>
+</html>
+</html>
